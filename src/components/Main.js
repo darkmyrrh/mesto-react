@@ -1,10 +1,17 @@
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import Card from "./Card.js";
 import { CurrentUserContext } from "../contexts/CurrentUserContext.js";
 
-function Main({ cards, onEditAvatar, onEditProfile, onAddPlace, onOpenImagePopup, onCardLike, onCardDelete }) {
+function Main({
+  cards,
+  onEditAvatar,
+  onEditProfile,
+  onAddPlace,
+  onOpenImagePopup,
+  onCardLike,
+  onCardDelete,
+}) {
   const currentUser = useContext(CurrentUserContext);
-    
 
   return (
     <main className="main">
@@ -43,7 +50,12 @@ function Main({ cards, onEditAvatar, onEditProfile, onAddPlace, onOpenImagePopup
         <ul className="elements">
           {cards.map((card) => (
             <div key={card._id}>
-              <Card card={card} onCardClick={onOpenImagePopup} onCardDelete={onCardDelete} onCardLike={onCardLike} />
+              <Card
+                card={card}
+                onCardClick={onOpenImagePopup}
+                onCardDelete={onCardDelete}
+                onCardLike={onCardLike}
+              />
             </div>
           ))}
         </ul>

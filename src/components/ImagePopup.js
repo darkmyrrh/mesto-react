@@ -1,8 +1,6 @@
 function ImagePopup({ card, isOpen, onClose }) {
   return (
-    <section
-      className={`popup popup_dark popup_image ${isOpen ? "popup_opened" : ""}`}
-    >
+    <section className={`popup popup_dark ${isOpen ? "popup_opened" : ""}`}>
       <div className="popup__container popup__container_figure">
         <button
           type="button"
