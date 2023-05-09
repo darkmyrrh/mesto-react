@@ -1,3 +1,4 @@
+import { usePopupClose } from "../hooks/usePopupClose.js";
 function PopupWithForm({
   name,
   title,
@@ -7,6 +8,8 @@ function PopupWithForm({
   onClose,
   onSubmit,
 }) {
+  usePopupClose(isOpen, onClose);
+
   return (
     <section className={`popup ${isOpen ? "popup_opened" : ""}`}>
       <div className="popup__container">
@@ -15,7 +18,7 @@ function PopupWithForm({
           aria-label="Закрыть"
           className="popup__close root__button"
           onClick={onClose}
-        ></button>
+        />
         <form className="form" name={`${name}`} onSubmit={onSubmit}>
           <h2 className="form__heading">{`${title}`}</h2>
           {children}

@@ -49,14 +49,13 @@ function Main({
       <section className="photo-grid">
         <ul className="elements">
           {cards.map((card) => (
-            <div key={card._id}>
-              <Card
-                card={card}
-                onCardClick={onOpenImagePopup}
-                onCardDelete={onCardDelete}
-                onCardLike={onCardLike}
-              />
-            </div>
+            <Card
+              key={card._id}
+              card={card}
+              onCardClick={onOpenImagePopup}
+              onCardDelete={onCardDelete}
+              onCardLike={onCardLike}
+            />
           ))}
         </ul>
       </section>
