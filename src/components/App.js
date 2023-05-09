@@ -21,7 +21,6 @@ function App() {
   const [currentUser, setСurrentUser] = useState({});
   const [cards, setCards] = useState([]);
   const [renderLoading, setRenderLoading] = useState(false);
- 
 
   useEffect(() => {
     api

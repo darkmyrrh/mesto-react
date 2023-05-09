@@ -1,6 +1,6 @@
 import PopupWithForm from "./PopupWithForm.js";
 import { useForm } from "../hooks/useForm.js";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function AddPlacePopup({ isOpen, onClose, onAddPlace, isLoading }) {
   const { values, handleChange, setValues } = useForm({});
